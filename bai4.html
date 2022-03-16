@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 4</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			function KiemTra()
+			{
+				//var tdn = document.getElementsByName('dangnhap').value;
+				//var mk = document.getElementsByName('matkhau').value;
+				//var nl = document.getElementsByName('nhaplai').value;
+				var tdn = f.dangnhap.value;
+				var mk = f.matkhau.value;
+				var nl = f.nhaplai.value;
+				if(tdn ==""||mk==""||nl=="")
+				{
+					alert('chưa nhập đủ:v');
+					return false;
+				}
+				if(tdn.length<6)
+				{
+					alert('6 kí tự:v');
+					return false;
+				}
+				if(mk!=nl)
+				{
+					alert('nhập đúng mật khẩu đi');
+					return false;
+				}
+				return true;
+
+			}
+		</script>
+		<form name="f">
+			<table>
+				<tr>
+					<td>Tên đăng nhập: </td>
+					<td><input type="text" name="dangnhap"></td>
+					<td>(nhiều hơn 6 ký tự)</td>
+				</tr>
+				<tr>
+					<td>Mật khẩu: </td>
+					<td><input type="password" name="matkhau"></td>
+				</tr>
+				<tr>
+					<td>Nhập lại mật khẩu: </td>
+					<td><input type="password" name="nhaplai"></td>
+				</tr>			
+			</table>
+			<button type="submit" onclick="return KiemTra()">Kiểm tra</button>
+		</form>
+	</body>
+</html>
